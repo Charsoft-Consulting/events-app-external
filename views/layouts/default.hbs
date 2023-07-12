@@ -18,11 +18,10 @@
   <h1 class="display-3">Welcome to Charlene's Application</h1>
   <p class="lead">This is the externally facing events site.</p>
   <hr class="my-2">
-  <p>It uses utility classes for typography and
-     spacing to space content out within the larger container.</p>
+  <p>Modified the class example to leverage Bootstrap and Fontawesome because I couldn't help myself.</p>
   
 
-<table class="table table-responsive">
+<table class="table table-responsive table-hover">
   <thead>
     <tr>
       <th >Feedback</th>
@@ -36,20 +35,45 @@
     {{{body}}}
   </tbody>
 </div>
-<div class="row">
- <div class="col-md-1">
-    <h2>Add an event</h2>    
- </div>
- <div class="col-md-3">
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#eventModal">
+ <i class="fas fa-plus-circle"></i>
+ Add a new event
+</button>
+
+<!-- Modal -->
+<div class="modal" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
     <form action="/event" method="post">
-       title: <input class="form-control" name="title" type="text" /> <br />
-       description: <input class="form-control" name="description" type="text" /> <br />
-       location: <input class="form-control" name="location" type="text" /> <br />
-       <br />
-        <input class="btn btn-primary" type="submit" name="submit" value="submit" />
-    </form>
- </div> 
-   
-  </div>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="eventModalLabel">New Event</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row col-md-11">
+
+                title: <input class="form-control" name="title" type="text" /> <br />
+                description: <input class="form-control" name="description" type="text" /> <br />
+                location: <input class="form-control" name="location" type="text" /> <br />
+                <br />
+                    
+        
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       <!--<input class="btn btn-primary" type="submit" name="submit" value="submit" />-->
+        <button class="btn btn-primary" type="submit" name="submit">Submit</button>
+       
+      </div>
+    </div>
+ </form>
+</div>
+
+
 </body>
 </html>

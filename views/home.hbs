@@ -7,13 +7,15 @@
             <form method="POST" action="/event/like">
                             <input type="hidden" value="{{id}}" name="id">
                         <!--  <input class="btn btn-sm btn-primary"  type="submit" value="Like"> -->
-                        <button class="btn btn-sm btn-outline-primary" type="submit"><i class="fas fa-thumbs-up"></i></button>
+                        <button class="btn btn-sm btn-outline-primary" data-toggle="tooltip"
+        data-placement="top" title="Like this event" type="submit"><i class="fas fa-thumbs-up"></i></button>
                         </form>
                     
                         <form method="POST" action="/event/unlike">
                             <input  type="hidden" value="{{id}}" name="id">
                         <!-- <input class="btn btn-sm btn-primary" type="submit" value="UN-Like"> -->
-                            <button class="btn btn-sm btn-outline-primary" type="submit"><i class="fas fa-thumbs-down"></i></button>
+                            <button class="btn btn-sm btn-outline-primary" type="submit" data-toggle="tooltip"
+        data-placement="top" title="UN-Like this event"><i class="fas fa-thumbs-down"></i></button>
                         </form>
                 
          </div>
