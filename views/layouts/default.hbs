@@ -14,19 +14,42 @@
 
 </head>
 <body>
-  <div>
-      <h1>Welcome to Charlene's application</h1>
+ <div class="jumbotron">
+  <h1 class="display-3">Welcome to Charlene's Application</h1>
+  <p class="lead">This is the externally facing events site.</p>
+  <hr class="my-2">
+  <p>It uses utility classes for typography and
+     spacing to space content out within the larger container.</p>
+  
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th >Feedback</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>#Likes</th>
+    </tr>
+  </thead>
+  <tbody>
     {{{body}}}
+  </tbody>
 </div>
-<div>
-  <h2>Add an event</h2>
+<div class="row">
+ <div class="col-md-1">
+    <h2>Add an event</h2>    
+ </div>
+ <div class="col-md-3">
     <form action="/event" method="post">
-       title: <input name="title" type="text" /> <br />
-       description: <input name="description" type="text" /> <br />
-       location: <input name="location" type="text" /> <br />
+       title: <input class="form-control" name="title" type="text" /> <br />
+       description: <input class="form-control" name="description" type="text" /> <br />
+       location: <input class="form-control" name="location" type="text" /> <br />
        <br />
-        <input type="submit" name="submit" value="submit" />
+        <input class="btn btn-primary" type="submit" name="submit" value="submit" />
     </form>
+ </div> 
+   
   </div>
 </body>
 </html>
