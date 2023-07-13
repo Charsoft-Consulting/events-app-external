@@ -1,4 +1,4 @@
-name: Build and Push to Docker3
+name: Build and Push to Docker4
 
 on:
   push: 
