@@ -1,8 +1,18 @@
 
   {{#events}}
 
-    <tr>
-        <td>
+    <div class="card">
+        <img class="card-img-top" src="/images/pathToYourImage.png" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">{{ title }}</h4>
+            <p class="card-text">
+              {{ description }}
+              <br />
+              Location: {{ location }}
+            </p>
+        </div>
+        <!-- card footer -->
+        <div class="card-footer">
          <div class="btn-group" role="group" aria-label="Basic example">
             <form method="POST" action="/event/like">
                             <input type="hidden" value="{{id}}" name="id">
@@ -19,13 +29,11 @@
                         </form>
                 
          </div>
-            
-        </td>
-        <td>{{ title }}</td>
-        <td>{{ description }}</td>
-        <td>{{ location }}</td>
-        <td>{{ likes }}  </td>
-        <td><button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button></td>
+            <div class="pull-right"> Likes: {{ likes }} </div>
+        </div>
+  
+       
+        <!-- <td><button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button></td> -->
     </tr>
  
    
